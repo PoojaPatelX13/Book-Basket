@@ -1,11 +1,18 @@
+/* Footer */
+
 .footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 15px;
   padding: 20px 30px;
-  background: #ffffff;
-  border-top: 1px solid #f0e5dc;
+
+  /* Glass Effect */
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
   color: #8b817b;
   font-size: 13px;
 }
@@ -37,6 +44,8 @@
 .footer-copyright span {
   margin-left: 12px;
 }
+
+/* Responsive Design */
 
 @media (max-width: 650px) {
   .footer {
