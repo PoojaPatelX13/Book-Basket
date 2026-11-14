@@ -439,11 +439,26 @@
 @media (max-width: 768px) {
   .dashboard-page {
     padding: 18px;
+    width: 100%;
+    overflow-x: hidden;
   }
 
   .welcome-banner {
     padding: 28px 24px;
     min-height: 230px;
+    gap: 15px;
+  }
+
+  .welcome-content {
+    max-width: 100%;
+  }
+
+  .welcome-content h1 {
+    font-size: clamp(27px, 5vw, 36px);
+  }
+
+  .welcome-content p {
+    font-size: 14px;
   }
 
   .welcome-illustration {
@@ -458,6 +473,14 @@
   .trending-books-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .my-library-cover img {
+    height: 190px;
+  }
+
+  .section-heading {
+    flex-wrap: wrap;
+  }
 }
 
 @media (max-width: 480px) {
@@ -467,17 +490,29 @@
 
   .welcome-banner {
     padding: 25px 20px;
+    border-radius: 20px;
   }
 
   .welcome-illustration {
     display: none;
   }
 
+  .welcome-content h1 {
+    font-size: 29px;
+  }
+
+  .welcome-content p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
   .dashboard-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px;
   }
 
   .stat-card {
+    min-width: 0;
     padding: 13px;
     gap: 9px;
   }
@@ -508,7 +543,20 @@
     font-size: 21px;
   }
 
+  .section-heading p {
+    font-size: 12px;
+  }
+
   .trending-books-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px;
+  }
+
+  .my-library-cover img {
+    height: 160px;
+  }
+
+  .my-library-info h3 {
+    font-size: 13px;
   }
 }
