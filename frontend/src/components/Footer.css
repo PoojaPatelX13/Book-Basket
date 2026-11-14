@@ -1,19 +1,26 @@
-/* Footer */
+/* Footer Glass Box */
 
 .footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 15px;
-  padding: 20px 30px;
 
-  /* Glass Effect */
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  width: calc(100% - 60px);
+  max-width: 1400px;
+  margin: 25px auto;
+  padding: 22px 30px;
 
-  border-top: 1px solid rgba(255, 255, 255, 0.35);
-  color: #8b817b;
+  /* Frosted Glass Effect */
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(25px) saturate(180%);
+  -webkit-backdrop-filter: blur(25px) saturate(180%);
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+
+  color: #ffffff;
   font-size: 13px;
 }
 
@@ -21,13 +28,13 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #c87559;
+  color: #e5c77d;
   font-size: 15px;
   font-weight: 700;
 }
 
 .footer-tagline {
-  color: #92847b;
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .footer-copyright {
@@ -35,10 +42,11 @@
   align-items: center;
   gap: 5px;
   flex-wrap: wrap;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .footer-copyright svg {
-  color: #d77f63;
+  color: #e5c77d;
 }
 
 .footer-copyright span {
@@ -49,9 +57,12 @@
 
 @media (max-width: 650px) {
   .footer {
+    width: calc(100% - 28px);
     flex-direction: column;
     text-align: center;
-    padding: 18px 12px;
+    padding: 20px 12px;
+    gap: 10px;
+    border-radius: 16px;
   }
 
   .footer-copyright {
