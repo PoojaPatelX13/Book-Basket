@@ -33,9 +33,9 @@
     inset: 0;
     z-index: 1;
     background: linear-gradient(90deg,
-            rgba(3, 12, 18, 0.65),
-            rgba(3, 12, 18, 0.35),
-            rgba(3, 12, 18, 0.65));
+            rgba(3, 12, 18, 0.78),
+            rgba(3, 12, 18, 0.48),
+            rgba(3, 12, 18, 0.72));
     pointer-events: none;
 }
 
@@ -58,9 +58,7 @@
     border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 16px;
 
-    box-shadow:
-        0 8px 32px rgba(0, 0, 0, 0.25),
-        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
 }
 
 .home-logo {
@@ -115,8 +113,7 @@
     border-radius: 4px;
 }
 
-.nav-register:hover,
-.home-cta:hover {
+.nav-register:hover {
     background: #f4d99b;
     transform: translateY(-3px);
 }
@@ -125,52 +122,14 @@
 .home-hero {
     position: relative;
     z-index: 2;
-    isolation: isolate;
-
     flex: 1;
     min-height: 620px;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-
     padding: 50px 20px 70px;
-}
-
-/* Main Glass Content Panel */
-.home-hero::before {
-    content: "";
-    position: absolute;
-    z-index: 0;
-
-    width: min(850px, 90%);
-    height: 470px;
-
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    background: rgba(255, 255, 255, 0.13);
-
-    backdrop-filter: blur(28px) saturate(180%);
-    -webkit-backdrop-filter: blur(28px) saturate(180%);
-
-    border: 1px solid rgba(255, 255, 255, 0.30);
-    border-radius: 24px;
-
-    box-shadow:
-        0 15px 45px rgba(0, 0, 0, 0.30),
-        inset 0 1px 2px rgba(255, 255, 255, 0.25);
-
-    pointer-events: none;
-}
-
-/* Keep Hero Content Above Glass */
-.home-hero>* {
-    position: relative;
-    z-index: 1;
 }
 
 /* Eyebrow Text */
@@ -221,25 +180,39 @@
 .home-description {
     max-width: 590px;
     margin: 28px auto 35px;
-    color: rgba(255, 255, 255, 0.95);
+    color: rgba(255, 255, 255, 0.9);
     font-size: 16px;
     line-height: 1.9;
 }
 
-/* Explore Button */
+/* Explore Button - Gold Glass Effect */
 .home-cta {
     display: inline-flex;
     align-items: center;
     gap: 25px;
     padding: 16px 29px;
-    background: #e8c77d;
-    color: #101820;
+
+    background: rgba(232, 199, 125, 0.20);
+    backdrop-filter: blur(18px) saturate(180%);
+    -webkit-backdrop-filter: blur(18px) saturate(180%);
+
+    border: 1px solid rgba(232, 199, 125, 0.75);
+    color: #ffe5a6;
+
     text-decoration: none;
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 1.5px;
-    border-radius: 3px;
+    border-radius: 8px;
+
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.18);
     transition: 0.3s ease;
+}
+
+.home-cta:hover {
+    background: rgba(232, 199, 125, 0.35);
+    border-color: #f4d99b;
+    transform: translateY(-3px);
 }
 
 .home-cta span {
@@ -250,7 +223,7 @@
 /* Bottom Note */
 .home-note {
     margin: 45px 0 0;
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(255, 255, 255, 0.7);
     font-size: 10px;
     letter-spacing: 4px;
 }
@@ -293,12 +266,6 @@
     .home-hero {
         min-height: 570px;
         padding: 40px 16px 55px;
-    }
-
-    .home-hero::before {
-        width: 94%;
-        height: 430px;
-        border-radius: 18px;
     }
 
     .home-eyebrow {
